@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Bocetos web: destapaciones</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#101820;--soft:#4D5A63;--line:#CBD3D0;--mist:#EEF2F0;--cobalt:#2346E8}
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:var(--ink);font-family:'Archivo',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;font-size:17px;line-height:1.55}
+.wrap{max-width:1080px;margin:0 auto;padding:56px 24px 80px}
+h1{font-stretch:125%;font-weight:900;font-size:clamp(32px,5vw,52px);line-height:1.04;letter-spacing:-.02em;margin:0}
+.intro{color:var(--soft);max-width:38em;margin:16px 0 40px;font-size:18px}
+.list{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:16px;overflow:hidden;text-decoration:none;transition:border-color .15s,box-shadow .15s}
+.card:hover{border-color:var(--ink);box-shadow:0 8px 24px rgba(16,24,32,.08)}
+.card:focus-visible{outline:3px solid var(--cobalt);outline-offset:3px}
+.card img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;background:var(--mist);border-bottom:1px solid var(--line)}
+.card div{padding:18px 20px 22px}
+.card h2{font-stretch:125%;font-weight:800;font-size:22px;margin:0 0 6px}
+.card p{margin:0 0 14px;color:var(--soft);font-size:15.5px}
+.card span{font-weight:700;color:var(--cobalt);font-size:15.5px}
+.note{margin-top:36px;background:#FFF6CC;border:1px dashed #C9B24A;color:#5B4B00;font-size:14.5px;padding:12px 16px;border-radius:8px;max-width:48em}
+@media (max-width:860px){.list{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.card{transition:none}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <h1>Bocetos de la web de destapaciones</h1>
+  <p class="intro">Tres propuestas de diseño para la nueva página. Abrí cada una y probala también desde el celular.</p>
+  <div class="list">
+    <a class="card" href="/boceto-1/">
+      <img src="/boceto-1/capturas/escritorio.jpg" alt="Vista del boceto 1">
+      <div><h2>Boceto 1</h2><p>Estilo industrial. Cañería animada al inicio y botones de llamada siempre visibles.</p><span>Ver boceto 1</span></div>
+    </a>
+    <a class="card" href="/boceto-2/">
+      <img src="/boceto-2/capturas/escritorio.jpg" alt="Vista del boceto 2">
+      <div><h2>Boceto 2</h2><p>Estilo limpio. Arma el mensaje de WhatsApp con el problema y la zona, y muestra Pilar como base.</p><span>Ver boceto 2</span></div>
+    </a>
+    <a class="card" href="/boceto-3/">
+      <img src="/boceto-3/capturas/escena-3d-escritorio.jpg" alt="Vista de la escena 3D del boceto 3">
+      <div><h2>Boceto 3</h2><p>El boceto 2 con una escena 3D que muestra cómo se destapa una cañería mientras bajás.</p><span>Ver boceto 3</span></div>
+    </a>
+  </div>
+  <p class="note">Son bocetos: el nombre, las fotos, las reseñas y algunos datos son de ejemplo y se confirman antes de publicar la web real.</p>
+</main>
+</body>
+</html>
