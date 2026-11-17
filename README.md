@@ -25,15 +25,15 @@ Cada boceto es un solo archivo `index.html`. Se abre con doble clic en cualquier
 
 ![Boceto 2 en escritorio](boceto-2/capturas/escritorio.jpg)
 
-**Boceto 4**
-
-![Boceto 4 en escritorio](boceto-4/capturas/servicio-escritorio.jpg)
-
 **Boceto 3: escena 3D en seis momentos del scroll**
 
 ![Escena 3D del boceto 3 en escritorio](boceto-3/capturas/escena-3d-escritorio.jpg)
 
 ![Escena 3D del boceto 3 en celular](boceto-3/capturas/escena-3d-celular.jpg)
+
+**Boceto 4**
+
+![Boceto 4 en escritorio](boceto-4/capturas/servicio-escritorio.jpg)
 
 ## Tecnología
 
