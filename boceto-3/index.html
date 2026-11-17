@@ -70,8 +70,8 @@ h2{font-stretch:125%;font-weight:800;font-size:clamp(30px,4vw,46px);letter-spaci
 
 /* Hero */
 .hero{padding:44px 0 60px;border-bottom:1px solid var(--line)}
-.hero .wrap{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:56px;align-items:start}
-.hero h1{font-stretch:125%;font-weight:900;font-size:clamp(32px,3.9vw,50px);line-height:1.04;letter-spacing:-.02em}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:64px;align-items:center}
+.hero h1{font-stretch:125%;font-weight:900;font-size:clamp(34px,4.3vw,56px);line-height:1.03;letter-spacing:-.02em}
 .hero .lead{font-size:19px;max-width:30em;margin:20px 0 26px;color:#2A353D}
 .hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
 .hero dl{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:40px 0 0;border-top:1.5px solid var(--ink)}
@@ -244,7 +244,6 @@ footer li{margin-bottom:4px}
 .hero .lead{animation:rise .75s cubic-bezier(.2,.7,.2,1) .17s both}
 .hero .ctas{animation:rise .75s cubic-bezier(.2,.7,.2,1) .27s both}
 .hero dl{animation:rise .75s cubic-bezier(.2,.7,.2,1) .37s both}
-.ask{animation:rise .85s cubic-bezier(.2,.7,.2,1) .22s both}
 
 /* Doble tilde */
 .bubble time{display:inline-flex;align-items:center;gap:3px}
@@ -333,6 +332,44 @@ footer li{margin-bottom:4px}
   .steps::after{transition:none}.steps .n{transition:none}
   .close .big .d{transform:none;transition:none}
 }
+
+/* Hero simplificado */
+.hero{padding:56px 0 64px}
+.hero .lead{font-size:19.5px;max-width:28em;margin:20px 0 30px}
+.hero-act{display:flex;flex-direction:column;align-items:flex-start}
+.btn-hero{min-height:66px;padding:0 30px;font-size:20px;border-radius:12px;box-shadow:0 10px 24px rgba(35,70,232,.25)}
+.btn-hero svg{width:23px;height:23px}
+.hero-24{margin:12px 0 0;font-size:15.5px;color:var(--soft)}
+.hero-wa{display:inline-flex;align-items:center;gap:8px;margin-top:22px;font-weight:600;font-size:16px;color:var(--ink);text-decoration:none;border-bottom:1.5px solid var(--line);padding-bottom:2px}
+.hero-wa svg{width:19px;height:19px;color:var(--wa);flex:none}
+.hero-wa:hover{border-color:var(--wa)}
+.hero-photo{margin:0;position:relative}
+.hero-ph{aspect-ratio:4/5;max-height:560px;width:100%;border-radius:20px;background:repeating-linear-gradient(135deg,var(--mist),var(--mist) 16px,#E3E9E6 16px,#E3E9E6 32px);border:1.5px dashed #9AA8A3;display:flex;align-items:center;justify-content:center;text-align:center;padding:30px;color:#4F5D58;font-weight:600;font-size:15px}
+.hero-photo figcaption{position:absolute;left:18px;bottom:18px;background:#fff;border-radius:12px;padding:12px 16px;box-shadow:0 8px 24px rgba(16,24,32,.12);line-height:1.3}
+.hero-photo figcaption b{display:block;font-size:16px}
+.hero-photo figcaption span{font-size:14px;color:var(--soft)}
+.hero-photo{animation:rise .85s cubic-bezier(.2,.7,.2,1) .22s both}
+.hero .hero-act{animation:rise .75s cubic-bezier(.2,.7,.2,1) .27s both}
+
+/* Armador en su propia sección */
+.ask-sec .wrap{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:64px;align-items:start}
+.ask-urg{margin:22px 0 0;font-size:16px;color:var(--soft)}
+.ask-urg a{font-weight:700;color:var(--cobalt)}
+@media (max-width:980px){
+  .ask-sec .wrap{grid-template-columns:1fr;gap:28px}
+  .hero-ph{aspect-ratio:16/11;max-height:none}
+}
+@media (max-width:640px){
+  .hero{padding:30px 0 40px}
+  .hero h1{font-size:33px}
+  .hero .lead{font-size:17.5px;margin:14px 0 22px}
+  .hero-act{align-items:stretch}
+  .btn-hero{width:100%;font-size:18px;padding:0 16px}
+  .hero-24{text-align:center}
+  .hero-wa{align-self:center}
+  .hero-ph{border-radius:16px}
+}
+@media (prefers-reduced-motion:reduce){.hero-photo,.hero .hero-act{animation:none}}
 </style>
 </head>
 <body>
@@ -364,26 +401,69 @@ footer li{margin-bottom:4px}
 <main>
 <div class="hero">
   <div class="wrap">
-    <div>
+    <div class="hero-copy">
       <h1>Destapaciones de cloacas y cañerías en Pilar y todo el AMBA</h1>
-      <p class="lead">Urgencias las 24 horas. Salimos desde Pilar a Zona Norte, Capital Federal, Zona Oeste y Zona Sur para destapar cloacas, pluviales, baños y cocinas.</p>
-      <div class="ctas">
-        <a class="btn btn-call" href="tel:+541136812385">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02z"/></svg>
-          Llamar al 11 3681-2385
-        </a>
-        <a class="btn btn-ghost" href="#consulta">Armar consulta por WhatsApp</a>
+      <p class="lead">Salimos desde Pilar a Zona Norte, Capital Federal, Zona Oeste y Zona Sur. Casas, edificios y comercios.</p>
+      <div class="hero-act">
+        <a class="btn btn-call btn-hero" href="tel:+541136812385"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02z"/></svg><span>Llamar al 11 3681-2385</span></a>
+        <p class="hero-24">Atendemos las 24 horas, todos los días.</p>
+        <a class="hero-wa" href="#consulta"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 15l-1.4 5 5.2-1.36A9.9 9.9 0 1 0 12.04 2zm5.8 14.06c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.1-1.47-1.1-2.8 0-1.33.7-1.99.95-2.26.25-.27.54-.34.72-.34h.52c.17 0 .4-.06.62.47.24.55.8 1.92.87 2.06.07.14.11.3.02.48-.1.18-.14.3-.27.46l-.41.48c-.14.14-.28.29-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.28.13.43.11.6-.07.16-.18.69-.8.88-1.08.18-.27.36-.23.62-.14.25.09 1.6.76 1.88.9.27.13.46.2.52.32.07.11.07.66-.17 1.33z"/></svg>o mandá fotos por WhatsApp</a>
       </div>
-      <dl>
-        <div><dt>Atención</dt><dd>Las 24 horas, todos los días</dd></div>
-        <div><dt>Presupuesto</dt><dd>Por WhatsApp, con fotos del problema</dd></div>
-        <div><dt>Trabajamos en</dt><dd>Casas, edificios, consorcios y comercios</dd></div>
-      </dl>
     </div>
+    <figure class="hero-photo">
+      <div class="hero-ph">Foto real del técnico con la camioneta o la máquina</div>
+      <figcaption><b>Nombre y apellido</b><span>Dueño y técnico a cargo</span></figcaption>
+    </figure>
+  </div>
+</div>
 
-    <form class="ask" id="consulta" action="https://wa.me/5491136812385" onsubmit="return false">
+<section class="story" id="como-destapamos" aria-labelledby="story-t">
+  <div class="story-sticky">
+    <canvas id="pipe3d" aria-hidden="true"></canvas>
+    <div class="tag3d" id="tag-clog"><b>Obstrucción: grasa y restos</b></div>
+    <div class="tag3d" id="tag-head"><b>Cabezal de la máquina</b></div>
+    <div class="story-ui">
+      <div class="wrap">
+        <div class="story-text">
+          <h2 id="story-t">Así destapamos una cañería</h2>
+          <ol class="stages">
+            <li class="stage is-active"><h3><span>1</span>La obstrucción</h3><p>Grasa, sarro y restos se acumulan hasta que el agua deja de pasar y empieza a volver.</p></li>
+            <li class="stage"><h3><span>2</span>Entra la máquina</h3><p>Pasamos el cable de la máquina por la cámara o una boca de acceso, sin abrir la cañería.</p></li>
+            <li class="stage"><h3><span>3</span>Rompemos el tapón</h3><p>El cabezal gira dentro del caño y desarma la obstrucción.</p></li>
+            <li class="stage"><h3><span>4</span>El agua vuelve a correr</h3><p>Probamos que la cañería quede libre antes de irnos.</p></li>
+          </ol>
+          <a class="btn btn-wa story-cta" href="#consulta">¿Tu cañería está así? Contanos qué pasó</a>
+        </div>
+      </div>
+    </div>
+    <div class="story-hint" aria-hidden="true">Bajá para ver cómo destapamos<i></i></div>
+  </div>
+</section>
+
+<section id="servicios">
+  <div class="wrap">
+    <h2>Qué destapamos</h2>
+    <p class="intro">Si reconocés alguna de estas señales, escribinos. Cada servicio tiene su propia página con más detalle.</p>
+    <div class="probs">
+      <div class="prob"><h3>Inodoros</h3><p>No baja el agua, sube al tirar la cadena o rebalsa.</p><button class="btn btn-ghost btn-sm" type="button" data-pick="inodoro">Consultar</button></div>
+      <div class="prob"><h3>Piletas de cocina</h3><p>El agua drena lento o vuelve, casi siempre por grasa acumulada.</p><button class="btn btn-ghost btn-sm" type="button" data-pick="cocina">Consultar</button></div>
+      <div class="prob"><h3>Cloacas y cámaras</h3><p>Olor fuerte, rejillas que devuelven agua o la cámara desbordada.</p><button class="btn btn-ghost btn-sm" type="button" data-pick="cloaca">Consultar</button></div>
+      <div class="prob"><h3>Pluviales</h3><p>El patio o la terraza se inundan cuando llueve.</p><button class="btn btn-ghost btn-sm" type="button" data-pick="pluvial">Consultar</button></div>
+      <div class="prob"><h3>Bachas y lavaderos</h3><p>Desagües lentos en baño o lavadero, o el lavarropas que desborda.</p><button class="btn btn-ghost btn-sm" type="button" data-pick="bacha">Consultar</button></div>
+      <div class="prob"><h3>Edificios y comercios</h3><p>Columnas, sótanos y cocinas de locales. Urgencias o trabajos programados.</p><button class="btn btn-ghost btn-sm" type="button" data-pick="edificio">Consultar</button></div>
+    </div>
+    <p class="no-pozos"><b>No hacemos desagote de pozos ni servicio de camión atmosférico.</b> Nos dedicamos solo a destapar cañerías.</p>
+  </div>
+</section>
+
+<section class="ask-sec">
+  <div class="wrap">
+    <div class="ask-intro">
       <h2>Contanos qué pasó</h2>
-      <p>Elegí las opciones y te armamos el mensaje para enviarlo por WhatsApp.</p>
+      <p class="intro">Elegí qué se tapó y dónde, y te armamos el mensaje para WhatsApp. Después mandás las fotos en el mismo chat y te pasamos el presupuesto.</p>
+      <p class="ask-urg">¿Es urgente? <a href="tel:+541136812385">Llamá al 11 3681-2385</a></p>
+    </div>
+    <form class="ask" id="consulta" action="https://wa.me/5491136812385" onsubmit="return false">
 
       <fieldset>
         <legend>¿Qué se tapó?</legend>
@@ -434,50 +514,11 @@ footer li{margin-bottom:4px}
       <small>Después podés mandar las fotos en el mismo chat. ¿Preferís hablar? <a href="tel:+541136812385">Llamá al 11 3681-2385</a></small>
     </form>
   </div>
-</div>
-
-<section class="story" id="como-destapamos" aria-labelledby="story-t">
-  <div class="story-sticky">
-    <canvas id="pipe3d" aria-hidden="true"></canvas>
-    <div class="tag3d" id="tag-clog"><b>Obstrucción: grasa y restos</b></div>
-    <div class="tag3d" id="tag-head"><b>Cabezal de la máquina</b></div>
-    <div class="story-ui">
-      <div class="wrap">
-        <div class="story-text">
-          <h2 id="story-t">Así destapamos una cañería</h2>
-          <ol class="stages">
-            <li class="stage is-active"><h3><span>1</span>La obstrucción</h3><p>Grasa, sarro y restos se acumulan hasta que el agua deja de pasar y empieza a volver.</p></li>
-            <li class="stage"><h3><span>2</span>Entra la máquina</h3><p>Pasamos el cable de la máquina por la cámara o una boca de acceso, sin abrir la cañería.</p></li>
-            <li class="stage"><h3><span>3</span>Rompemos el tapón</h3><p>El cabezal gira dentro del caño y desarma la obstrucción.</p></li>
-            <li class="stage"><h3><span>4</span>El agua vuelve a correr</h3><p>Probamos que la cañería quede libre antes de irnos.</p></li>
-          </ol>
-          <a class="btn btn-wa story-cta" href="#consulta">¿Tu cañería está así? Contanos qué pasó</a>
-        </div>
-      </div>
-    </div>
-    <div class="story-hint" aria-hidden="true">Bajá para ver cómo destapamos<i></i></div>
-  </div>
-</section>
-
-<section id="servicios">
-  <div class="wrap">
-    <h2>Qué destapamos</h2>
-    <p class="intro">Si reconocés alguna de estas señales, escribinos. Cada servicio tiene su propia página con más detalle.</p>
-    <div class="probs">
-      <div class="prob"><h3>Inodoros</h3><p>No baja el agua, sube al tirar la cadena o rebalsa.</p><button class="btn btn-ghost btn-sm" type="button" data-pick="inodoro">Consultar</button></div>
-      <div class="prob"><h3>Piletas de cocina</h3><p>El agua drena lento o vuelve, casi siempre por grasa acumulada.</p><button class="btn btn-ghost btn-sm" type="button" data-pick="cocina">Consultar</button></div>
-      <div class="prob"><h3>Cloacas y cámaras</h3><p>Olor fuerte, rejillas que devuelven agua o la cámara desbordada.</p><button class="btn btn-ghost btn-sm" type="button" data-pick="cloaca">Consultar</button></div>
-      <div class="prob"><h3>Pluviales</h3><p>El patio o la terraza se inundan cuando llueve.</p><button class="btn btn-ghost btn-sm" type="button" data-pick="pluvial">Consultar</button></div>
-      <div class="prob"><h3>Bachas y lavaderos</h3><p>Desagües lentos en baño o lavadero, o el lavarropas que desborda.</p><button class="btn btn-ghost btn-sm" type="button" data-pick="bacha">Consultar</button></div>
-      <div class="prob"><h3>Edificios y comercios</h3><p>Columnas, sótanos y cocinas de locales. Urgencias o trabajos programados.</p><button class="btn btn-ghost btn-sm" type="button" data-pick="edificio">Consultar</button></div>
-    </div>
-    <p class="no-pozos"><b>No hacemos desagote de pozos ni servicio de camión atmosférico.</b> Nos dedicamos solo a destapar cañerías.</p>
-  </div>
 </section>
 
 <section class="who" id="quien">
   <div class="wrap">
-    <div class="photo">Foto real: el técnico con la camioneta o la máquina</div>
+    <div class="photo">Foto real: la camioneta y las máquinas</div>
     <div>
       <h2>Quién va a tu casa</h2>
       <blockquote>“Frase corta del dueño, en primera persona, sobre cómo trabaja. Se escribe con él.”</blockquote>
