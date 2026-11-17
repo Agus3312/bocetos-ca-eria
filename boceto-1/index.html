@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Destapaciones cloacales y pluviales 24 hs en CABA y GBA</title>
+<meta name="description" content="Destapaciones cloacales y pluviales las 24 horas en CABA, Zona Norte, Sur y Oeste. Escribinos por WhatsApp con fotos y te pasamos el presupuesto.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F4F7F6; --enamel:#0B1F2E; --pipe:#0F6A99; --signal:#FF5A1F; --mist:#DCE6EA; --wa:#1FA855; --muted:#4B5E6B;
+  --display:'Big Shoulders Display','Arial Narrow',Impact,sans-serif;
+  --body:'Public Sans',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--enamel);font-family:var(--body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--signal);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:.98;margin:0;letter-spacing:.2px}
+
+/* Boceto banner */
+.draft{background:var(--enamel);color:#cfe0e8;font-size:13px;text-align:center;padding:7px 12px}
+.draft b{color:#fff}
+
+/* Header */
+header{background:var(--paper);border-bottom:2px solid var(--enamel)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 20px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand svg{flex:none}
+.brand strong{font-family:var(--display);font-size:26px;font-weight:900;line-height:1;display:block}
+.brand span{font-size:13px;color:var(--muted)}
+nav.main{display:flex;gap:26px;font-weight:600;font-size:15px}
+nav.main a{text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}
+nav.main a:hover{border-color:var(--signal)}
+.hdr-call{display:flex;flex-direction:column;align-items:flex-end;line-height:1.15;text-decoration:none}
+.hdr-call small{font-size:12px;color:var(--muted)}
+.hdr-call b{font-family:var(--display);font-size:26px;font-weight:800}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 26px;border-radius:6px;font-weight:700;font-size:18px;text-decoration:none;border:0;cursor:pointer;transition:transform .12s ease}
+.btn:active{transform:translateY(1px)}
+.btn-call{background:var(--signal);color:#fff;box-shadow:0 3px 0 #b93a0b}
+.btn-wa{background:var(--wa);color:#fff;box-shadow:0 3px 0 #11763a}
+.btn svg{width:22px;height:22px;flex:none}
+
+/* Hero */
+.hero{padding:34px 0 0;background:var(--paper)}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:end}
+.hero h1{font-size:clamp(40px,5vw,64px);line-height:1.1;font-weight:900;text-wrap:balance;max-width:15em}
+.hero h1 em{font-style:normal;color:var(--pipe)}
+.hero p.lead{font-size:18px;max-width:34em;margin:16px 0 22px;color:#233847}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px}
+.hero-note{margin-top:14px;font-size:14px;color:var(--muted)}
+.hero-side{border-left:4px solid var(--enamel);padding-left:22px;margin-bottom:6px}
+.hero-side p{margin:0 0 14px;font-size:16px}
+.hero-side p b{display:block;font-family:var(--display);font-size:30px;font-weight:800;line-height:1.05}
+
+/* Pipe illustration */
+.pipe{margin-top:30px;border-top:2px solid var(--enamel);border-bottom:2px solid var(--enamel);background:var(--mist)}
+.pipe svg{display:block;width:100%;height:auto}
+.cable-head{animation:advance 3.4s linear .8s both}
+.cable-line{transform-origin:0 50%;animation:grow 3.4s linear .8s both}
+.clog{animation:clear .5s ease-out both}
+.clog.c1{animation-delay:2s}.clog.c2{animation-delay:2.6s}.clog.c3{animation-delay:3.55s}
+.flow{opacity:0;animation:flow .8s ease-out 4.2s forwards}
+@keyframes advance{from{transform:translateX(0)}to{transform:translateX(1060px)}}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes clear{to{opacity:0;transform:scale(.4)}}
+@keyframes flow{to{opacity:1}}
+@media (prefers-reduced-motion:reduce){
+  .cable-head,.cable-line,.clog,.flow{animation:none}
+  .cable-head{transform:translateX(1060px)} .clog{opacity:0} .flow{opacity:1}
+}
+
+/* Facts strip */
+.facts{background:var(--enamel);color:#fff}
+.facts .wrap{display:grid;grid-template-columns:repeat(3,1fr)}
+.fact{padding:22px 22px 22px 0;display:flex;gap:14px;align-items:flex-start}
+.fact + .fact{border-left:1px solid #2c4557;padding-left:22px}
+.fact svg{flex:none;width:30px;height:30px;color:var(--signal);margin-top:2px}
+.fact b{display:block;font-family:var(--display);font-size:25px;font-weight:800;line-height:1.05}
+.fact span{font-size:15px;color:#b9cdd8}
+
+section{padding:76px 0}
+section h2{font-size:clamp(36px,5vw,58px);margin-bottom:14px}
+.sec-lead{max-width:36em;color:#33505f;margin:0 0 36px}
+
+/* Servicios index */
+.svc-list{border-top:2px solid var(--enamel)}
+.svc{display:grid;grid-template-columns:minmax(220px,.8fr) 1.4fr auto;gap:24px;align-items:center;padding:22px 0;border-bottom:1px solid #b8c8d0}
+.svc h3{font-size:34px}
+.svc p{margin:0;color:#33505f}
+.svc a{font-weight:700;color:var(--pipe);white-space:nowrap}
+.svc:hover{background:#fff}
+
+/* Cómo trabajamos */
+.how{background:#fff;border-top:2px solid var(--enamel);border-bottom:2px solid var(--enamel)}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s}
+.steps li{counter-increment:s;padding:0 22px 0 0;position:relative}
+.steps li + li{padding-left:22px;border-left:2px solid var(--mist)}
+.steps li::before{content:counter(s);display:block;font-family:var(--display);font-weight:900;font-size:64px;line-height:1;color:var(--pipe);margin-bottom:10px}
+.steps h3{font-size:27px;margin-bottom:8px}
+.steps p{margin:0;font-size:15.5px;color:#33505f}
+
+/* Zonas */
+.zones{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:2px solid var(--enamel)}
+.zone{padding:24px 22px 26px 0;text-decoration:none;display:block}
+.zone + .zone{padding-left:22px;border-left:1px solid #b8c8d0}
+.zone h3{font-size:40px;margin-bottom:10px}
+.zone p{margin:0 0 14px;font-size:15px;color:#33505f}
+.zone span{font-weight:700;color:var(--pipe)}
+.zone:hover h3{color:var(--pipe)}
+
+/* Equipo */
+.team{background:#fff;border-top:2px solid var(--enamel)}
+.ph-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:14px}
+.ph{background:repeating-linear-gradient(135deg,#e8eff2,#e8eff2 14px,#dde7eb 14px,#dde7eb 28px);border:2px dashed #8aa2af;min-height:230px;display:flex;align-items:flex-end;padding:16px;color:#45606f;font-weight:600;font-size:15px}
+.ph.tall{grid-row:span 2;min-height:474px}
+
+/* Testimonios */
+.tests{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.test{border-top:4px solid var(--signal);padding-top:16px}
+.test p{margin:0 0 12px;font-size:18px}
+.test small{color:var(--muted)}
+.todo{background:#fff3ec;border:1px dashed var(--signal);padding:12px 14px;font-size:14px;color:#7a3515;margin-top:20px}
+
+/* FAQ */
+.faq{max-width:820px}
+details{border-top:1px solid #b8c8d0;padding:2px 0}
+details:last-of-type{border-bottom:1px solid #b8c8d0}
+summary{cursor:pointer;list-style:none;font-weight:700;font-size:19px;padding:18px 40px 18px 0;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);font-size:28px;color:var(--pipe);font-weight:500}
+details[open] summary::after{content:"–"}
+details p{margin:0 0 20px;color:#33505f;max-width:40em}
+
+/* CTA final */
+.final{background:var(--enamel);color:#fff;padding:70px 0}
+.final .wrap{display:flex;flex-wrap:wrap;gap:30px;align-items:center;justify-content:space-between}
+.final h2{font-size:clamp(38px,5.4vw,66px);max-width:12em}
+.final p{color:#b9cdd8;margin:12px 0 0;max-width:30em}
+
+footer{padding:34px 0 110px;font-size:14px;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 30px;justify-content:space-between}
+
+/* Barra móvil */
+.mbar{display:none}
+
+@media (max-width:900px){
+  nav.main{display:none}
+  .hero{padding-top:34px}
+  .hero-grid{grid-template-columns:1fr;gap:28px}
+  .facts .wrap{grid-template-columns:1fr}
+  .fact{padding:16px 0}.fact + .fact{border-left:0;padding-left:0;border-top:1px solid #2c4557}
+  .svc{grid-template-columns:1fr;gap:6px}
+  .steps{grid-template-columns:1fr 1fr;row-gap:34px}
+  .steps li:nth-child(3){padding-left:0;border-left:0}
+  .zones{grid-template-columns:1fr 1fr}
+  .zone:nth-child(3){padding-left:0;border-left:0}.zone:nth-child(n+3){border-top:1px solid #b8c8d0}
+  .ph-grid{grid-template-columns:1fr 1fr}.ph.tall{grid-row:auto;min-height:230px;grid-column:span 2}
+  .tests{grid-template-columns:1fr}
+  section{padding:54px 0}
+  .hdr-call small{display:none}
+  .hdr-call b{font-size:22px}
+}
+@media (max-width:560px){
+  .brand span{display:none}
+  .hdr-call{display:none}
+  .cta-row .btn{width:100%}
+  .steps{grid-template-columns:1fr}.steps li + li{padding-left:0;border-left:0}
+  .zones{grid-template-columns:1fr}.zone + .zone{padding-left:0;border-left:0;border-top:1px solid #b8c8d0}
+  .mbar{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;padding:10px;background:var(--paper);border-top:2px solid var(--enamel);z-index:10}
+  .mbar .btn{min-height:52px;font-size:16px;padding:0 10px}
+}
+</style>
+</head>
+<body>
+
+<div class="draft"><b>Boceto de diseño.</b> Textos, fotos, testimonios y datos son de ejemplo y se confirman con el cliente antes de publicar.</div>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#" aria-label="Inicio">
+      <svg width="46" height="46" viewBox="0 0 46 46" aria-hidden="true"><rect width="46" height="46" rx="6" fill="#0B1F2E"/><path d="M8 18h30M8 28h30" stroke="#DCE6EA" stroke-width="3"/><path d="M8 23h30" stroke="#FF5A1F" stroke-width="3" stroke-dasharray="6 4"/></svg>
+      <div><strong>Nombre de la empresa</strong><span>Destapaciones cloacales y pluviales</span></div>
+    </a>
+    <nav class="main" aria-label="Principal">
+      <a href="#servicios">Servicios</a><a href="#zonas">Zonas</a><a href="#equipo">Equipo</a><a href="#preguntas">Preguntas</a>
+    </nav>
+    <a class="hdr-call" href="tel:+541136812385"><small>Urgencias las 24 hs</small><b>11 3681-2385</b></a>
+  </div>
+</header>
+
+<main>
+<section class="hero" style="padding-bottom:0">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Destapaciones cloacales y pluviales las 24 hs en <em>CABA y GBA</em></h1>
+      <p class="lead">Si tenés un caño tapado, un rebalse o un desagüe que no corre, llamanos. Atendemos casas, edificios, consorcios y comercios en Capital Federal, Zona Norte, Zona Sur y Zona Oeste.</p>
+      <div class="cta-row">
+        <a class="btn btn-call" href="tel:+541136812385">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.25c1.1.37 2.3.57 3.6.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.3.2 2.5.57 3.6a1 1 0 01-.25 1z"/></svg>
+          Llamar ahora
+        </a>
+        <a class="btn btn-wa" href="https://wa.me/5491136812385?text=Hola%2C%20necesito%20una%20destapaci%C3%B3n.%20Te%20mando%20fotos.">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm5.2 14c-.2.6-1.300 1.200-1.800 1.200-.5.100-1 .2-3.300-.7a11 11 0 01-4.800-4.200c-.4-.6-1.200-1.600-1.200-3 0-1.300.7-2 1-2.300.2-.3.500-.3.700-.3h.5c.2 0 .4 0 .6.500l.8 2c.1.2.1.400 0 .6l-.4.600-.4.400c-.1.200-.3.400-.1.700.2.300.8 1.300 1.700 2.100 1.200 1 2.100 1.300 2.400 1.500.3.100.5.100.7-.1l.9-1.100c.2-.3.4-.2.700-.1l1.900.9c.3.100.5.200.6.300.1.200.1.800-.1 1.400z"/></svg>
+          Mandar fotos por WhatsApp
+        </a>
+      </div>
+      <p class="hero-note">Con fotos del problema te pasamos el presupuesto antes de ir.</p>
+    </div>
+    <aside class="hero-side">
+      <p><b>Respondemos rápido</b>Escribinos o llamanos a cualquier hora, también de noche y fines de semana.</p>
+      <p style="margin:0"><b>Equipos propios</b>Trabajamos con máquinas para obstrucciones complejas, no solo con destapadores manuales.</p>
+    </aside>
+  </div>
+
+  <div class="pipe" aria-hidden="true">
+    <svg viewBox="0 0 1200 150" preserveAspectRatio="xMidYMid slice">
+      <rect x="0" y="40" width="1200" height="70" fill="#fff"/>
+      <rect x="0" y="40" width="1200" height="6" fill="#0B1F2E"/>
+      <rect x="0" y="104" width="1200" height="6" fill="#0B1F2E"/>
+      <g class="flow" fill="none" stroke="#0F6A99" stroke-width="4" stroke-linecap="round">
+        <path d="M30 75h120M200 75h160M410 75h140M600 75h180M830 75h120M1000 75h170" stroke-dasharray="2 14"/>
+      </g>
+      <g fill="#7a5c3c">
+        <g class="clog c1" style="transform-origin:420px 78px"><ellipse cx="420" cy="78" rx="46" ry="26"/><ellipse cx="445" cy="68" rx="26" ry="18" fill="#6a4e32"/></g>
+        <g class="clog c2" style="transform-origin:640px 78px"><ellipse cx="640" cy="78" rx="52" ry="28"/><ellipse cx="615" cy="64" rx="26" ry="16" fill="#6a4e32"/></g>
+        <g class="clog c3" style="transform-origin:900px 78px"><ellipse cx="900" cy="78" rx="42" ry="24"/><ellipse cx="920" cy="70" rx="22" ry="14" fill="#6a4e32"/></g>
+      </g>
+      <line class="cable-line" x1="0" y1="75" x2="1060" y2="75" stroke="#FF5A1F" stroke-width="5"/>
+      <g class="cable-head">
+        <circle cx="0" cy="75" r="19" fill="#FF5A1F" stroke="#0B1F2E" stroke-width="4"/>
+        <path d="M-9 75h18M0 66v18" stroke="#0B1F2E" stroke-width="3"/>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<div class="facts">
+  <div class="wrap">
+    <div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Atención 24 hs</b><span>Urgencias de día, de noche y fines de semana</span></div></div>
+    <div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-6.100 7-11a7 7 0 10-14 0c0 4.900 7 11 7 11z"/><circle cx="12" cy="10" r="2.500"/></svg><div><b>CABA y GBA</b><span>Zona Norte, Sur y Oeste</span></div></div>
+    <div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="12" r="2.500"/><path d="M14 10h4M14 14h4"/></svg><div><b>Presupuesto con fotos</b><span>Nos escribís por WhatsApp y te respondemos</span></div></div>
+  </div>
+</div>
+
+<section id="servicios">
+  <div class="wrap">
+    <h2>Qué destapamos</h2>
+    <p class="sec-lead">Elegí tu caso. Cada servicio tiene su propia página con más detalle.</p>
+    <div class="svc-list">
+      <div class="svc"><h3>Cloacas</h3><p>Obstrucciones en cañerías cloacales, rebalses y malos olores.</p><a href="#">Ver servicio</a></div>
+      <div class="svc"><h3>Pluviales</h3><p>Desagües pluviales, bocas de tormenta y limpieza preventiva.</p><a href="#">Ver servicio</a></div>
+      <div class="svc"><h3>Edificios y consorcios</h3><p>Destapaciones en columnas, patios y sótanos, programadas o de urgencia.</p><a href="#">Ver servicio</a></div>
+      <div class="svc"><h3>Comercios</h3><p>Cañerías comerciales, cocinas y gastronomía, para que el local no pare.</p><a href="#">Ver servicio</a></div>
+      <div class="svc"><h3>Baños y cocinas</h3><p>Inodoros, bachas, lavaderos y rejillas del hogar.</p><a href="#">Ver servicio</a></div>
+      <div class="svc"><h3>Desobstrucción con máquina</h3><p>Equipos para tapones que no salen con métodos manuales.</p><a href="#">Ver servicio</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="how">
+  <div class="wrap">
+    <h2>Cómo trabajamos</h2>
+    <p class="sec-lead">Cuatro pasos, de tu mensaje a la cañería libre.</p>
+    <ol class="steps">
+      <li><h3>Nos escribís</h3><p>Llamás o mandás fotos del problema por WhatsApp.</p></li>
+      <li><h3>Te pasamos el presupuesto</h3><p>Te decimos el valor antes de ir, según lo que veamos.</p></li>
+      <li><h3>Vamos con el equipo</h3><p>Llegamos con la máquina adecuada para tu caso.</p></li>
+      <li><h3>Destapamos y limpiamos</h3><p>Dejamos el desagüe funcionando y el lugar limpio.</p></li>
+    </ol>
+    <div class="todo"><b>A confirmar con el cliente:</b> si da presupuesto antes de ir y si trabaja sin romper pisos.</div>
+  </div>
+</section>
+
+<section id="zonas">
+  <div class="wrap">
+    <h2>Dónde trabajamos</h2>
+    <p class="sec-lead">Llegamos a toda el área metropolitana. Tocá tu zona para ver el detalle.</p>
+    <div class="zones">
+      <a class="zone" href="#"><h3>Capital Federal</h3><p>Todos los barrios de CABA.</p><span>Ver zona</span></a>
+      <a class="zone" href="#"><h3>Zona Norte</h3><p>Ejemplos: Vicente López, San Isidro, Tigre.</p><span>Ver zona</span></a>
+      <a class="zone" href="#"><h3>Zona Sur</h3><p>Ejemplos: Avellaneda, Lanús, Quilmes.</p><span>Ver zona</span></a>
+      <a class="zone" href="#"><h3>Zona Oeste</h3><p>Ejemplos: Morón, Ituzaingó, La Matanza.</p><span>Ver zona</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="team" id="equipo">
+  <div class="wrap">
+    <h2>El equipo y las máquinas</h2>
+    <p class="sec-lead">Acá van fotos reales del equipo, las máquinas y los trabajos.</p>
+    <div class="ph-grid">
+      <div class="ph tall">Foto: camioneta o equipo en trabajo</div>
+      <div class="ph">Foto: máquina destapadora</div>
+      <div class="ph">Foto: técnico trabajando</div>
+      <div class="ph">Foto: antes y después</div>
+      <div class="ph">Foto: trabajo en edificio</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Lo que dicen los clientes</h2>
+    <p class="sec-lead">Opiniones reales, con permiso de cada cliente.</p>
+    <div class="tests">
+      <div class="test"><p>Testimonio real a cargar.</p><small>Nombre, zona y tipo de trabajo</small></div>
+      <div class="test"><p>Testimonio real a cargar.</p><small>Nombre, zona y tipo de trabajo</small></div>
+      <div class="test"><p>Testimonio real a cargar.</p><small>Nombre, zona y tipo de trabajo</small></div>
+    </div>
+    <div class="todo"><b>No inventar testimonios.</b> Se cargan los reales y se enlaza el perfil de Google Business con sus reseñas.</div>
+  </div>
+</section>
+
+<section id="preguntas" style="padding-top:0">
+  <div class="wrap">
+    <h2>Preguntas frecuentes</h2>
+    <p class="sec-lead">Lo que más nos preguntan antes de llamar.</p>
+    <div class="faq">
+      <details><summary>¿Atienden de noche y fines de semana?</summary><p>Sí. Atendemos urgencias las 24 horas, todos los días.</p></details>
+      <details><summary>¿Cuánto tardan en llegar?</summary><p>Depende de la zona y del momento. Al escribirnos o llamarnos te confirmamos el tiempo estimado.</p></details>
+      <details><summary>¿Cuánto cuesta una destapación?</summary><p>Depende del tipo de obstrucción y del acceso. Con fotos por WhatsApp te pasamos el presupuesto antes de ir.</p></details>
+      <details><summary>¿Trabajan con edificios y comercios?</summary><p>Sí. Hacemos destapaciones programadas y de urgencia en edificios, consorcios y locales.</p></details>
+      <details><summary>¿Hay que romper el piso?</summary><p>En muchos casos no. La máquina trabaja por dentro de la cañería. Si en tu caso hace falta, te lo decimos antes de empezar.</p></details>
+    </div>
+    <div class="todo" style="max-width:820px"><b>A confirmar con el cliente:</b> tiempos de llegada y las respuestas sobre presupuesto y rotura de pisos.</div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <div>
+      <h2>¿Tenés un caño tapado ahora?</h2>
+      <p>Llamanos o escribinos. Te respondemos a cualquier hora.</p>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn-call" href="tel:+541136812385">Llamar ahora</a>
+      <a class="btn btn-wa" href="https://wa.me/5491136812385">Escribir por WhatsApp</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>Nombre de la empresa. Destapaciones cloacales y pluviales en CABA y GBA.</div>
+    <div>Teléfono y WhatsApp: 11 3681-2385. Email y dirección a confirmar.</div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="btn btn-call" href="tel:+541136812385">Llamar</a>
+  <a class="btn btn-wa" href="https://wa.me/5491136812385">WhatsApp</a>
+</div>
+
+</body>
+</html>
