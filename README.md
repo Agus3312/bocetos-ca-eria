@@ -1,6 +1,6 @@
 # Bocetos web: servicio de destapaciones
 
-Tres bocetos de la página web para un servicio de destapaciones de cloacas, cañerías y pluviales con base en Pilar que trabaja en todo el AMBA.
+Cuatro bocetos de la página web para un servicio de destapaciones de cloacas, cañerías y pluviales con base en Pilar que trabaja en todo el AMBA.
 
 Los textos, fotos, reseñas y algunos datos son de ejemplo. Cada boceto lo indica con una franja arriba y con notas en las secciones que hay que confirmar con el cliente antes de publicar.
 
@@ -13,6 +13,7 @@ Cada boceto es un solo archivo `index.html`. Se abre con doble clic en cualquier
 | 1 | [`boceto-1/index.html`](boceto-1/index.html) | Estilo industrial (azul y naranja). Cañería animada en el hero, servicios en filas, zonas, preguntas frecuentes y barra de llamada fija en el celular. |
 | 2 | [`boceto-2/index.html`](boceto-2/index.html) | Estilo limpio (blanco y cobalto). Armador de consulta que escribe el mensaje de WhatsApp, problemas por síntomas, sección del técnico, mapa con Pilar como base y teléfono gigante al cierre. |
 | 3 | [`boceto-3/index.html`](boceto-3/index.html) | El boceto 2 con una escena 3D que avanza con el scroll (Three.js) y animaciones: encabezado fijo, rutas del mapa que se dibujan, pasos que se completan y dígitos del teléfono que suben. |
+| 4 | [`boceto-4/index.html`](boceto-4/index.html) | Diseño propio con técnicas analizadas con [REA](https://github.com/morluto/rea) en un sitio de plomería ganador de Site of the Day en Awwwards: palabra gigante que llena el ancho, textos gigantes en movimiento que se aceleran con el scroll y videos 3D prerenderizados de piezas de PVC (renderizados para este boceto con Three.js) que solo se reproducen en pantalla. |
 
 ## Capturas
 
@@ -23,6 +24,10 @@ Cada boceto es un solo archivo `index.html`. Se abre con doble clic en cualquier
 **Boceto 2**
 
 ![Boceto 2 en escritorio](boceto-2/capturas/escritorio.jpg)
+
+**Boceto 4**
+
+![Boceto 4 en escritorio](boceto-4/capturas/servicio-escritorio.jpg)
 
 **Boceto 3: escena 3D en seis momentos del scroll**
 
